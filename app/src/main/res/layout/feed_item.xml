@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/feed_bg"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -14,7 +15,7 @@
         android:layout_marginTop="@dimen/feed_item_margin"
         android:background="@drawable/bg_parent_rounded_corner"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/feed_item_padding_top_bottom"
+        android:paddingBottom="@dimen/feed_item_padding_bottom"
         android:paddingTop="@dimen/feed_item_padding_top_bottom" >
 
         <LinearLayout
@@ -79,6 +80,48 @@
             android:background="@color/white"
             android:scaleType="fitXY"
             android:visibility="visible" />
-    </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/Widget.AppCompat.Button.Colored"
+                app:backgroundTint="@color/colorPrimary"
+                android:id="@+id/LikeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:text="Like"
+                android:textStyle="normal|italic" />
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/Widget.AppCompat.Button.Colored"
+                app:backgroundTint="@color/colorPrimary"
+                android:id="@+id/FollowButton"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Follow"
+                android:textStyle="normal|italic" />
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/Widget.AppCompat.Button.Colored"
+                app:backgroundTint="@color/colorPrimary"
+                android:id="@+id/ShareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:text="Share"
+                android:textStyle="normal|italic" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

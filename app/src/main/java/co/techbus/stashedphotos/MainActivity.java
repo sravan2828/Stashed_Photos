@@ -4,7 +4,9 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.android.volley.Cache;
 import com.android.volley.Cache.Entry;
@@ -32,13 +34,15 @@ public class MainActivity extends Activity {
     private FeedListAdapter listAdapter;
     private List<FeedItem> feedItems;
     private String URL_FEED = "http://services.stashcity.com/Service.svc/GetAllRecentImages";
-
+    private ProgressBar spinner;
     @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        spinner = (ProgressBar) findViewById(R.id.progressBar1);
+        spinner.setVisibility(View.VISIBLE);
         listView = (ListView) findViewById(R.id.list);
 
         feedItems = new ArrayList<FeedItem>();
@@ -85,6 +89,7 @@ public class MainActivity extends Activity {
             // Adding request to volley request queue
             AppController.getInstance().addToRequestQueue(jsonReq);
         }
+        spinner.setVisibility(View.GONE);
 
     }
 
