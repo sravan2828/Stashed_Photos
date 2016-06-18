@@ -95,7 +95,8 @@
                 android:id="@+id/LikeButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:scaleX="0.8"
+                android:scaleY="0.8"
 
                 android:text="Like"
                 android:textStyle="normal|italic" />
@@ -110,6 +111,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="Follow"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
                 android:textStyle="normal|italic" />
 
             <android.support.v7.widget.AppCompatButton
@@ -118,7 +121,8 @@
                 android:id="@+id/ShareButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:scaleX="0.8"
+                android:scaleY="0.8"
 
                 android:text="Share"
                 android:textStyle="normal|italic" />
